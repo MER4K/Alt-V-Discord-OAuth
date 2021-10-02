@@ -1,18 +1,8 @@
 console.log ('test web page')
-
-window.addEventListener('keydown', key => {
-	if (key === 'Escape')
-	{
-		if ('alt' in window)
-		{
-			alt.emit ('close:Webview');
-		}
-	}
-})
 let playerName;
 if ('alt' in window)
 {
-	alt.on ('display:Name', (name) => {
+	alt.on ('display:Name', (displayName) => {
 
 	})
 }
@@ -25,3 +15,13 @@ function displayName(name)
 	playerName = name;	
 	document.write(playerName)
 }
+
+window.addEventListener('keydown', key => {
+	if (key === 'Escape')
+	{
+		if ('alt' in window)
+		{
+			alt.emit ('close:Webview');
+		}
+	}
+})
