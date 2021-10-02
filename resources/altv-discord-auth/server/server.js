@@ -76,3 +76,15 @@ if (process.env['ENABLE_WHITELIST'] && process.env['ENABLE_WHITELIST'] !== 'fals
     import('./verify');
     import('./express');
 }
+
+
+alt.on('playerConnect', playerConnect);
+
+function playerConnect(player) {
+    alt.emit('discord:BeginAuth', player);
+}
+alt.on('discord:AuthDone', playerAuthDone);
+
+function playerAuthDone(player, discordInfo) {
+    console.log(discordInfo);
+}
