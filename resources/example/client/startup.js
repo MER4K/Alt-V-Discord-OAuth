@@ -13,11 +13,10 @@ alt.onServer('webView:LoadLogin', () =>
     if (!webview)
     {
         webview = new alt.WebView('http://resource/client/html/discord/index.html')   
-        webview.on('close:Webview', closeWebview)
+        webview.on('close:Webview', closeWebview);
+        webview.on('ready:Webview', readyWebview);
     }
     webview.focus();
-    webview.emit ('display:Name', alt.Player.local.name)
-
     alt.showCursor(true);
 })
 
@@ -27,4 +26,8 @@ function closeWebview()
     webview.destroy();
 
     webview = undefined;
+}
+function readyWebview()
+{
+    webview.emit ('display:Name', alt.Player.local.name)
 }
