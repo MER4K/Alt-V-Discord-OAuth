@@ -77,7 +77,7 @@ if (process.env['ENABLE_WHITELIST'] && process.env['ENABLE_WHITELIST'] !== 'fals
     import('./express');
 }
 
-
+import alt from 'alt-server';
 alt.on('playerConnect', playerConnect);
 
 function playerConnect(player) {
