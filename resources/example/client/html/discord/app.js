@@ -3,6 +3,7 @@ let playerName;
 function displayName(name)
 {
 	playerName = name;	
+	document.write('TESTETESTE')
 	document.write(playerName)
 	
 	// 1. Create the button
