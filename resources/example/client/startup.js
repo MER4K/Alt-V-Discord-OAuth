@@ -11,7 +11,7 @@ alt.onServer('webView:Load', () =>
 {
     if (!webview)
     {
-        webview = new alt.WebView('http://resource/client/html/discord/index.html')   
+        webview = new alt.WebView('http://resource/client/html/discord2/index.html')   
         webview.on('close:Webview', closeWebview);
         webview.on('ready', ready);
     }
