@@ -42,7 +42,7 @@ function handleReady() {
         return;
     }
     setTimeout(function(){ view.emit('discord:Ready', discordURL); }, 1000);
-    view.emit('discord:Ready', discordURL);
+    //view.emit('discord:Ready', discordURL);
 }
 
 function showCursor(state) {
