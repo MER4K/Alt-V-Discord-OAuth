@@ -1,4 +1,3 @@
-/// <reference types="@altv/types-client" />
 import alt from 'alt-client';
 import * as native from 'natives';
 
@@ -14,20 +13,19 @@ alt.onServer('webView:LoadLogin', () =>
     {
         webview = new alt.WebView('http://resource/client/html/discord/index.html')   
         webview.on('close:Webview', closeWebview);
-        webview.on('ready:Webview', readyWebview);
+        webview.on('ready', ready);
     }
     webview.focus();
     alt.showCursor(true);
 })
-
+function ready()
+{
+    webview.emit('display:Name', alt.Player.local.name)
+}
 function closeWebview()
 {
     alt.showCursor(false);
     webview.destroy();
 
     webview = undefined;
-}
-function readyWebview()
-{
-    webview.emit ('display:Name', alt.Player.local.name)
 }

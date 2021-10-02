@@ -6,17 +6,6 @@ function displayName(name)
 	document.write(playerName)
 }
 
-if ('alt' in window)
-{
-	alt.on ('display:Name', displayName);
-	alt.emit('ready:Webview')
-}
-else
-{
-	displayName('TESTE')
-}
-
-
 window.addEventListener('keydown', key => {
 	if (key === 'Escape')
 	{
@@ -26,3 +15,12 @@ window.addEventListener('keydown', key => {
 		}
 	}
 })
+if ('alt' in window)
+{
+	alt.on('display:Name', displayName);
+	alt.emit('ready')
+}
+else
+{
+	displayName('Ricardo_Santos')
+}
