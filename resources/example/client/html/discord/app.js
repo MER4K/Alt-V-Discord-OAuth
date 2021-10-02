@@ -1,10 +1,12 @@
 console.log ('test web page')
+
 let playerName;
+
 function displayName(name)
 {
-	playerName = name;	
-	document.write('TESTETESTE')
-	document.write(playerName)
+	playerName = name;
+	document.write(playerName);
+	console.log (`NAME? ${playerName}`)
 }
 
 window.addEventListener('keydown', key => {
