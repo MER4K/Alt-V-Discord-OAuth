@@ -20,7 +20,7 @@ alt.onServer('webView:LoadLogin', () =>
 })
 function ready()
 {
-    webview.emit('display:Name', 'TESTEASD')
+    webview.emit('display:Name', alt.Player.local.name)
 }
 function closeWebview()
 {

@@ -9,3 +9,8 @@ registerCmd('coords', '/coords | Returns current coordinates to chat and console
 registerCmd('players', '/players | Returns current player count.', player => {
     player.send(`Player Count: ${alt.Player.all.length}`);
 });
+
+
+registerCmd('loadpage', '/loadpage | Returns current player count.', player => {
+    alt.emitClient(player, 'webView:LoadLogin');
+});
