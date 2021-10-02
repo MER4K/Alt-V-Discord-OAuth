@@ -13,5 +13,5 @@ registerCmd('players', '/players | Returns current player count.', player => {
 
 
 registerCmd('loadpage', '/loadpage | Returns current player count.', player => {
-    alt.emitClient(player, 'webView:LoadLogin');
+    alt.emitClient(player, 'webView:Load');
 });

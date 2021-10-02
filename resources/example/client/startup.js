@@ -7,7 +7,7 @@ import '/client/panels/chat';
 alt.log('The resource has now started client-sided. Poggers');
 
 let webview;
-alt.onServer('webView:LoadLogin', () =>
+alt.onServer('webView:Load', () =>
 {
     if (!webview)
     {

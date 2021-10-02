@@ -6,18 +6,23 @@ function displayName(name)
 {
 	playerName = name;
 	document.write(playerName);
-	console.log (`NAME? ${playerName}`)
+	console.log(`NAME? ${playerName}`)
 }
-
-window.addEventListener('keydown', key => {
-	if (key === 'Escape')
+window.addEventListener('keydown', function(e)
+{
+    if((e.key=='Escape'||e.key=='Esc'||e.keyCode==27))
 	{
-		if ('alt' in window)
+        if ('alt' in window)
 		{
-			alt.emit ('close:Webview');
+			alt.emit('close:Webview');
 		}
-	}
-})
+		else
+		{
+			console.log('CLOSE')
+		}
+    }
+}, true);
+
 if ('alt' in window)
 {
 	alt.on('display:Name', displayName);
