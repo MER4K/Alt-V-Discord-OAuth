@@ -19,5 +19,5 @@ function playerConnect(player) {
     player.send(`Welcome to the server!`);
 
 
-    alt.emitClient(player, 'webView:LoadLogin');
+    //alt.emitClient(player, 'webView:LoadLogin');
 }

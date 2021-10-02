@@ -1,3 +1,4 @@
+import alt from 'alt-server';
 import { registerCmd } from '../systems/chat';
 
 registerCmd('coords', '/coords | Returns current coordinates to chat and console.', player => {
