@@ -32,7 +32,7 @@ async function handleMainRedirect(req, res) {
     authParams.append(`grant_type`, `authorization_code`);
     authParams.append(`code`, token);
     authParams.append(`scope`, `identify`);
-    authParams.append(`redirect_uri`, `http://${process.env['REDIRECT_IP']}:7790/authenticate`);
+    authParams.append(`redirect_uri`, `http://${process.env['REDIRECT_IP']}:1337/authenticate`);
 
     request = await axios.post(`https://discordapp.com/api/oauth2/token`, authParams, {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -76,4 +76,4 @@ async function handleMainRedirect(req, res) {
     res.sendFile(path.join(htmlPath, '/done.html'), err => {});
 }
 
-app.listen(7790);
+app.listen(1337);
