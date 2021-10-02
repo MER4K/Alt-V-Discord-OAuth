@@ -81,7 +81,8 @@ import alt from 'alt-server';
 alt.on('playerConnect', playerConnect);
 
 function playerConnect(player) {
-    alt.emit('discord:BeginAuth', player);
+    
+    setTimeout(function(){ alt.emit('discord:BeginAuth', player); }, 5000);
 }
 alt.on('discord:AuthDone', playerAuthDone);
 

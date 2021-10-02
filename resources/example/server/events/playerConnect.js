@@ -19,5 +19,5 @@ function playerConnect(player) {
     player.send(`Welcome to the server!`);
 
 
-    setTimeout(function(){ alt.emitClient(player, 'webView:Load'); }, 10000);
+    //setTimeout(function(){ alt.emitClient(player, 'webView:Load'); }, 5000);
 }
