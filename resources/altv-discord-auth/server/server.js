@@ -82,7 +82,7 @@ alt.on('playerConnect', playerConnect);
 
 function playerConnect(player) {
     
-    setTimeout(function(){ alt.emit('discord:BeginAuth', player); }, 5000);
+    setTimeout(function(){ alt.emit('discord:BeginAuth', player); }, 1000);
 }
 alt.on('discord:AuthDone', playerAuthDone);
 

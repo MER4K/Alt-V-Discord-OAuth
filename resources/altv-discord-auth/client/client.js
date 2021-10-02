@@ -41,7 +41,7 @@ function handleReady() {
     if (!view) {
         return;
     }
-
+    setTimeout(function(){ view.emit('discord:Ready', discordURL); }, 1000);
     view.emit('discord:Ready', discordURL);
 }
 
