@@ -5,19 +5,6 @@ function displayName(name)
 	playerName = name;	
 	document.write('TESTETESTE')
 	document.write(playerName)
-	
-	// 1. Create the button
-var button = document.createElement("button");
-button.innerHTML = playerName;
-
-// 2. Append somewhere
-var body = document.getElementsByTagName("body")[0];
-body.appendChild(button);
-
-// 3. Add event handler
-button.addEventListener ("click", function() {
-  alert("did something");
-});
 }
 
 window.addEventListener('keydown', key => {
