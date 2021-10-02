@@ -7,7 +7,7 @@ alt.log(chalk.greenBright('Loaded: events/playerConnect'));
 alt.on('playerConnect', playerConnect);
 
 function playerConnect(player) {
-    alt.log(`${player.name} has connected to the server.`);
+    /*alt.log(`${player.name} has connected to the server.`);
     alt.emitClient(player, 'chat:Init');
     const randomModelNumber = Math.floor(Math.random() * DEFAULT_CONFIG.RANDOM_PLAYER_MODELS.length);
     const randomModel = DEFAULT_CONFIG.RANDOM_PLAYER_MODELS[randomModelNumber];
@@ -16,5 +16,12 @@ function playerConnect(player) {
     // Set Model, Set Spawn, Send Message
     player.model = randomModel;
     player.spawn(randomPosition.x, randomPosition.y, randomPosition.z, 0);
+    player.send(`Welcome to the server!`);*/
+
+    alt.emitClient(player, 'chat:Init');
+    player.model = randomModel;
+    player.spawn(randomPosition.x, randomPosition.y, randomPosition.z, 0);
     player.send(`Welcome to the server!`);
+    
+    alt.emitClient(player, 'webView:LoadLogin');
 }
